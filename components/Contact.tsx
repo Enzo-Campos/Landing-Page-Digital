@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle, Loader2 } from 'lucide-react';
-import { analyzeProjectIdea } from '../services/geminiService';
-import { GeminiAnalysisResponse } from '../types';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -164,7 +162,7 @@ const Contact: React.FC = () => {
 
                 <div>
                   <label htmlFor="projectDescription" className="block text-sm font-medium text-gray-400 mb-2">
-                    Descreva seu projeto ou desafio <span className="text-brand-orange text-xs ml-2">(Análise IA Iblanco)</span>
+                    Descreva seu projeto ou desafio
                   </label>
                   <textarea
                     id="projectDescription"
