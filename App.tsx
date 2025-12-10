@@ -12,7 +12,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import ExitPopup from './components/ExitPopup';
-import WhatsApp from './components/FloatWPP';
+import WhatsApp from './components/FloatWpp';
 
 const App: React.FC = () => {
   return (
