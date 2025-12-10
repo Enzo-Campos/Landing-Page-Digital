@@ -21,7 +21,7 @@ const About: React.FC = () => {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
               Grupo Iblanco, <br/>
-              <span className="text-brand-orange">especialistas no canal farma</span>
+              <span className="text-brand-orange">onde estratégia, comunicação e tecnologia se conectam.</span>
             </h2>
             <p className="text-gray-400 text-lg mb-8 leading-relaxed">
               Somos uma agência especializada em inteligência estratégica de marketing, 
@@ -59,21 +59,6 @@ const About: React.FC = () => {
     title="Vimeo Video"
     style={{ border: 'none' }}
   ></iframe>
-
-  {/* Gradiente para legibilidade */}
-  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-
-  {/* Card de conteúdo */}
-  <div className="absolute bottom-6 left-6 right-6">
-    <div className="bg-neutral-900/80 backdrop-blur-md p-[10px] sm:p-6 rounded-xl border border-white/10">
-      <p className="text-white font-display font-bold mb-1">
-        Marketing 360º
-      </p>
-      <p className="text-gray-400 text-xs">
-        Atuamos em todas as frentes para garantir que sua marca seja onipresente e relevante.
-      </p>
-    </div>
-  </div>
 </div>
 
 

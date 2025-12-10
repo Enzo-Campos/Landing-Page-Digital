@@ -1,19 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { X, Lock, ArrowRight } from 'lucide-react';
 
 const ExitPopup: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const hasShownRef = useRef(false);
 
   useEffect(() => {
-    // Check if already shown ever (localStorage persists across sessions)
-    const shown = localStorage.getItem('exitPopupShown');
-    if (shown) return;
-
     const handleExitIntent = (e: MouseEvent) => {
-      // Trigger when mouse leaves the top of the window
+      if (hasShownRef.current) return;
+
       if (e.clientY <= 0) {
+        hasShownRef.current = true;
         setIsVisible(true);
-        localStorage.setItem('exitPopupShown', 'true');
       }
     };
 
@@ -25,25 +23,19 @@ const ExitPopup: React.FC = () => {
     setIsVisible(false);
   };
 
-  const handleCtaClick = () => {
-    closePopup();
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const handleCtaClick = () => { closePopup(); const contactSection = document.getElementById('contact'); if (contactSection) { contactSection.scrollIntoView({ behavior: 'smooth' }); } };
 
   if (!isVisible) return null;
 
+
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-      {/* Backdrop */}
       <div 
         className="absolute inset-0 bg-black/80 backdrop-blur-sm animate-fade-in"
         onClick={closePopup}
       ></div>
 
-      {/* Popup Card */}
+      {/* Popup */}
       <div className="relative bg-[#0f0f0f] border border-white/10 rounded-2xl p-8 max-w-lg w-full shadow-2xl animate-fade-in-up transform scale-100">
         <button 
           onClick={closePopup}
