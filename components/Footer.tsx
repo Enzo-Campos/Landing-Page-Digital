@@ -9,7 +9,9 @@ const Footer: React.FC = () => {
           
           <div className="col-span-1 md:col-span-1">
              <div className="text-2xl font-black tracking-tighter text-white mb-6">
-              Iblanco
+             <a href="#" className="flex items-center gap-2 group">
+                <img className="max-w-[200px]" src="https://iblanco.com.br/wp-content/uploads/2023/08/NOVA-MARCA-IBLANCO-2023-BRANCO-LARANJA-HORIZONTAL.png" alt="" />
+            </a>
             </div>
             <p className="text-gray-500 text-xs leading-relaxed max-w-xs">
               Transformando negócios através do marketing digital há mais de 35 anos.
