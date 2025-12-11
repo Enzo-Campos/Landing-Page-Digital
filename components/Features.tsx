@@ -148,7 +148,7 @@ const Features: React.FC = () => {
         items={[
           { icon: Smartphone, title: "Visual Profissional", desc: "Design moderno e responsivo que transmite credibilidade instantânea em qualquer dispositivo." },
           { icon: ShoppingCart, title: "Foco em Vendas", desc: "UX/UI projetado estrategicamente com gatilhos mentais para guiar o visitante até a compra." },
-          { icon: Zap, title: "Tecnologia & IA", desc: "Utilizamos ferramentas mais modernas e IA para desenvolver sites com foco em resultado." },
+          { icon: Zap, title: "Tecnologia & Agentes de IA", desc: "Desenvolvemos sites de alta performance integrados a agentes de IA que automatizam seu atendimento e vendas 24h." },
           { icon: MessageCircle, title: "Integração Total", desc: "Conexão direta com WhatsApp, CRM e ferramentas de automação para não perder nenhum lead." }
         ]}
       />
